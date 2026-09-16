@@ -62,7 +62,32 @@ fun TarjetaPresentacion() {
                     .border(3.dp, Color(0xFF1E6FE0), CircleShape)
             )
 
+            // ===== PASO 08: Datos personales =====
+            Spacer(Modifier.height(16.dp))
+            Text("Ruben Mariaca", fontSize = 24.sp)
+            Text("Ingeniero en Sistemas", color = Color(0xFF1E6FE0))
 
+            HorizontalDivider(Modifier.padding(vertical = 16.dp))
+
+            DatoPersonal("EDAD", "21 años")
+            DatoPersonal("CORREO", "rmariaca@unab.edu.co")
+            DatoPersonal("CIUDAD", "Bucaramanga, Colombia")
+
+
+
+            // ===== PASO 08: Botón =====
+            Spacer(Modifier.weight(1f))
+            Button(
+                onClick = { },
+                modifier = Modifier.fillMaxWidth().height(50.dp),
+                shape = RoundedCornerShape(12.dp),
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF1E6FE0))
+            ) {
+                Text("Contactar conmigo", fontWeight = FontWeight.Bold)
+            }
+        }
+    }
+}
 
 @Composable
 fun DatoPersonal(etiqueta: String, valor: String) {
