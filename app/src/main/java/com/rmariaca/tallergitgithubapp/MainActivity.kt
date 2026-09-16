@@ -73,7 +73,18 @@ fun TarjetaPresentacion() {
             DatoPersonal("CORREO", "rmariaca@unab.edu.co")
             DatoPersonal("CIUDAD", "Bucaramanga, Colombia")
 
-
+            // ===== PASO 09: Intereses =====
+            HorizontalDivider(Modifier.padding(vertical = 16.dp))
+            Text(
+                "Que quiero especializarme",
+                fontSize = 12.sp, fontWeight = FontWeight.Bold, color = Color.Gray
+            )
+            Spacer(Modifier.height(8.dp))
+            Text(
+                "Ciberseguridad",
+                textAlign = TextAlign.Justify,
+                color = Color.DarkGray
+            )
 
             // ===== PASO 08: Botón =====
             Spacer(Modifier.weight(1f))
@@ -83,7 +94,7 @@ fun TarjetaPresentacion() {
                 shape = RoundedCornerShape(12.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF1E6FE0))
             ) {
-                Text("Contactar conmigo", fontWeight = FontWeight.Bold)
+                Text("Contactar conmigo", )
             }
         }
     }
